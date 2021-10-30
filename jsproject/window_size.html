@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindowSize</title>
+    <style>
+      .tag {
+        display: inline-block;
+        background-color: thistle;
+        padding: 16px;
+        margin-top: 16px;
+        font-size: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tag">Window Size</div>
+    <script>
+      const tag = document.querySelector('.tag');
+      function updateTag() {
+        tag.innerHTML = `
+        window.screen: ${window.screen.Height}, ${window.screen.Width}<br/>
+        window.outer: ${window.outerHeight}, ${window.outerWidth}<br/>
+        window.screen: ${window.innerHeight}, ${window.innerWidth}<br/>
+        documentElement.clientWidth: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+        `;
+      }
+      //'resize'라는 이벤트가 일어날때마다 ()을 호출해줘(콜백함수) -> 이 ()는 {}안 에 들어있는 내용
+      window.addEventListener('resize', () => { //2번째로 실행(resize 이벤트가 일어날 때마다!)
+        updateTag();
+      });
+      updateTag(); //1번째 실행
+    </script>
+  </body>
+</html>
+
