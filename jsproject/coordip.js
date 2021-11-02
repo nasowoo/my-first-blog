@@ -2,7 +2,7 @@ const special = document.querySelector('#speical')
 const DOMRect = special.getBoundingClientRect();
 
 
-special.addEventListener('click', function(event) {
+special.addEventListener('click', event => {
   console.log(DOMRect);
   console.log(`client : ${event.clientX}, ${event.clientY}`);
   console.log(`page: ${event.pageX}, ${event.pageY}`);

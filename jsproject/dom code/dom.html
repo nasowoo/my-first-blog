@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body {
+        background-color: black;
+        text-align: center;
+      }
+      section {
+        width: 50%;
+        margin: 50px auto;
+        background-color: brown;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      img {
+        z-index: 100;
+        will-change: opacity;
+      }
+      h1,
+      h3,
+      span {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="img/Jeong.jfif" alt="avatar" />
+      <h1 id="brand">Goood Coding</h1>
+      <h3>'O' between the god and the good</h3>
+    </section>
+    <span>Jewelry Jeong!</span>
+    <script>
+      const section = document.querySelector('section');
+      const h2 = document.createElement('h2');
+      h2.setAttribute('class', 'title'); //<h2 class="title"></h2>
+      h2.textContent = "This is a title"; //<h2 class="title">This is a title</h2>
+      section.appendChild(h2);
+    </script>
+  </body>
+</html>
